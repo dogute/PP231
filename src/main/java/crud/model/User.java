@@ -13,19 +13,19 @@ public class User {
     @Column (name = "name")
     private String name;
 
-    @Column (name = "surname")
-    private String surname;
+    @Column (name = "last_name")
+    private String lastName;
 
     @Column (name = "age")
-    private Byte age;
+    private String age;
 
     public User() {
     }
 
-    public User(Long id, String name, String surname, Byte age) {
+    public User(Long id, String name, String lastName, String age) {
         this.id = id;
         this.name = name;
-        this.surname = surname;
+        this.lastName = lastName;
         this.age = age;
     }
 
@@ -45,19 +45,19 @@ public class User {
         this.name = name;
     }
 
-    public String getSurname() {
-        return surname;
+    public String getLastName() {
+        return lastName;
     }
 
-    public void setSurname(String surname) {
-        this.surname = surname;
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
     }
 
-    public Byte getAge() {
+    public String getAge() {
         return age;
     }
 
-    public void setAge(Byte age) {
+    public void setAge(String age) {
         this.age = age;
     }
 }

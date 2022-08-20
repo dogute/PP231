@@ -7,7 +7,7 @@ import crud.model.User;
 import java.util.List;
 
 public interface UserDao {
-   List<User> getAll();
+   List<User> getAllUsers();
 
    User getUser(long id);
 
