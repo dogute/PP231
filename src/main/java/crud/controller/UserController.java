@@ -20,8 +20,8 @@ public class UserController {
     }
 
     @GetMapping
-    public String getAllUsers(ModelMap model) {
-        List<User> userList = userService.getAllUsers();
+    public String getAll(ModelMap model) {
+        List<User> userList = userService.getAll();
         model.addAttribute("users", userList);
         return "users";
     }
