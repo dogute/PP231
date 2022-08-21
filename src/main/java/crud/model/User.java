@@ -13,8 +13,8 @@ public class User {
     @Column (name = "name")
     private String name;
 
-    @Column (name = "last_name")
-    private String lastName;
+    @Column (name = "surname")
+    private String surname;
 
     @Column (name = "age")
     private String age;
@@ -22,10 +22,10 @@ public class User {
     public User() {
     }
 
-    public User(Long id, String name, String lastName, String age) {
+    public User(Long id, String name, String surname, String age) {
         this.id = id;
         this.name = name;
-        this.lastName = lastName;
+        this.surname = surname;
         this.age = age;
     }
 
@@ -45,12 +45,12 @@ public class User {
         this.name = name;
     }
 
-    public String getLastName() {
-        return lastName;
+    public String getSurname() {
+        return surname;
     }
 
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
+    public void setSurname(String surname) {
+        this.surname = surname;
     }
 
     public String getAge() {
