@@ -15,6 +15,7 @@ public class UserController {
 
     private UserService userService;
 
+
     public UserController(UserService userService) {
         this.userService = userService;
     }
@@ -32,7 +33,7 @@ public class UserController {
         return "redirect:/users";
     }
 
-    @PostMapping(value = "/delete/{id}")
+    @DeleteMapping("/delete/{id}")
     public String deleteUser (@PathVariable int id) {
         userService.deleteUser(id);
         return "redirect:/users";
@@ -44,7 +45,7 @@ public class UserController {
         return "/edit";
     }
 
-    @PostMapping(value = "/updateUser")
+    @PutMapping(value = "/updateUser/")
     public String updateUser(@ModelAttribute User user) {
         userService.updateUser(user);
         return "redirect:/users";
